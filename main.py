@@ -12,7 +12,7 @@ pygame.display.set_caption("Mcgyver")
 screen = pygame.display.set_mode((900, 560))
 
 #import img of background from folder
-background = pygame.image.load( 'ressource/background.png' )
+background = pygame.image.load('ressource/background.png')
 
 #import img of game
 
@@ -41,8 +41,6 @@ while my_windows:
     screen.blit(game.player.image, game.player.rect)
 
     screen.blit(game.items.image, game.items.rect)
-
-    screen.blit
 
     #diplay pygame picture
     pygame.display.flip()

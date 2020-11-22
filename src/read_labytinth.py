@@ -1,4 +1,4 @@
-with open('./assets/level.txt') as f:
+with open('./src/assets/level.txt') as f:
     line = f.readline()
     while line:
         #print("Line : {}".format(line.strip()))
