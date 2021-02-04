@@ -1,3 +1,4 @@
-from read_maze import *
+# from maze import read_maze
+import maze
 
-read_maze("assets\level.txt")
+maze.read_maze("assets\level.txt")
