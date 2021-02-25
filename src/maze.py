@@ -7,6 +7,7 @@ class InvalidMazeChar(Exception):
 
 class Maze:
     maze = []
+    empty_tiles = set()
 
     @classmethod
     def read_maze(cls, file):
@@ -21,14 +22,14 @@ class Maze:
                     if not Tile.isValid(char):
                         print("InValid")
                         raise InvalidMazeChar(f"on ({row, column}) : '{char}'")
-                    # TODO: verifier que char est bien un tuile valide
-                    # créer une classe Tile
-                    # Si char n'est pas une Tile valide, envoyer une exception
                     line_maze.append(char)
+                    if Tile.isFloor(char):
+                        cls.empty_tiles.add(f"({row},{column})")
                     # print(f"{row},{column}")
                     column += 1
                 cls.maze.append(line_maze)
                 column = 0
                 row += 1
             print(cls.maze)
+            print(cls.empty_tiles)
             # print(cls.maze[1][1])
