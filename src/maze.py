@@ -39,9 +39,11 @@ class Maze:
             print(len(cls.empty_tiles))
             print(f"player_position {cls.player_position}")
             print(f"guardian_position {cls.guardian_position}")
-            cls.remove_empty_tiles_around(cls.player_position[0],cls.player_position[1])
+            cls.remove_empty_tiles_around(
+                cls.player_position[0], cls.player_position[1])
             print(len(cls.empty_tiles))
-            cls.remove_empty_tiles_around(cls.guardian_position[0],cls.guardian_position[1])
+            cls.remove_empty_tiles_around(
+                cls.guardian_position[0], cls.guardian_position[1])
             print(len(cls.empty_tiles))
 
     @classmethod
