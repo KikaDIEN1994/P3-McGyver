@@ -4,20 +4,32 @@ class Tile:
     PLAYER = "X"
     GUADIAN = "G"
 
-    VALID_TILES_CHARS = [FLOOR, WALL, PLAYER, GUADIAN]
+    ITEM_0 = "0"
+    ITEM_1 = "1"
+    ITEM_2 = "2"
+
+    ITEMS = [ITEM_0, ITEM_1, ITEM_2]
+
+    VALID_TILES_CHARS = [FLOOR, WALL, PLAYER, GUADIAN] + ITEMS
+
+    print(VALID_TILES_CHARS)
 
     @classmethod
-    def isValid(cls, char):
+    def is_valid(cls, char):
         return char in cls.VALID_TILES_CHARS
 
     @classmethod
-    def isFloor(cls, char):
+    def is_floor(cls, char):
         return char == cls.FLOOR
 
     @classmethod
-    def isPlayer(cls, char):
+    def is_player(cls, char):
         return char == cls.PLAYER
 
     @classmethod
-    def isGuardian(cls, char):
+    def is_guardian(cls, char):
         return char == cls.GUADIAN
+
+    @classmethod
+    def is_item(cls, char):
+        return char in cls.ITEMS
