@@ -1,0 +1,10 @@
+[x] définir dans une constante le nombre d'items a placer (3)
+[x] définir les constantes des objets dans Tile
+  [x] 1 Constante par item (ITEM_0, ... _2)
+  [x] Array ITEMS dans Tile avec la liste des constante des objets
+[ ] pour 3 tuiles
+    [ ] pick coordonnes r, c random_empty_tile
+    [ ] ajout dans maze de l'item
+        [ ] connaître l'index de l'item (de 0 a 2)
+        [ ] ajouter une Tile correspondant au bon item (s'aider de l'array Tile.ITEMS) aux bonne coordonnées dans Maze.maze
+        [ ] remove_empty_tiles_around après avoir placé un item

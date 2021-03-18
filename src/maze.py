@@ -76,8 +76,3 @@ class Maze:
     @classmethod
     def random_empty_tile(cls):
         return random.choice(tuple(cls.empty_tiles)).split(",")
-
-
-    @classmethod
-    def random_items(cls):
-        # Place 3 items in random_empty_tile
