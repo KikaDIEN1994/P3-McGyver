@@ -1,8 +1,11 @@
 import os
-import random
+
+import pygame
 
 from maze import Maze
 from tile import Tile
+
+pygame.init()
 
 
 class Test():
@@ -11,7 +14,24 @@ class Test():
     Maze.print()
     print(Maze.random_empty_tile())
 
-    """
+
+class display():
+
+    background_colour = (255, 255, 255)
+    (width, height) = (300, 200)
+    screen = pygame.display.set_mode((width, height))
+    pygame.display.set_caption('Homer Simpson')
+    screen.fill(background_colour)
+    pygame.display.flip()
+    running = True
+
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+
+"""
     maze = []
     empty_tiles = set()
     value = []
@@ -24,4 +44,5 @@ class Test():
         #print("value")
     """
 
-# print(empty_tiles)
+
+# print(Maze.random_empty_tile())

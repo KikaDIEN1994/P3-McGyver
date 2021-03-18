@@ -24,7 +24,7 @@ class Maze:
     def read_maze(cls, file):
         row = 0
         column = 0
-        print(f"Opening file : {file}")
+        # print(f"Opening file : {file}")
         with open(file) as reader:
             # print(reader.readlines())
             for line in reader.readlines():
@@ -43,7 +43,7 @@ class Maze:
                 cls.maze.append(line_maze)
                 column = 0
                 row += 1
-            print(cls.maze)
+            # print(cls.maze)
             print(len(cls.empty_tiles))
             print(f"player_position {cls.player_position}")
             print(f"guardian_position {cls.guardian_position}")
@@ -76,3 +76,7 @@ class Maze:
     @classmethod
     def random_empty_tile(cls):
         return random.choice(tuple(cls.empty_tiles)).split(",")
+
+    # @classmethod
+    # def random_items(cls):
+    #     # Place 3 items in random_empty_tile
