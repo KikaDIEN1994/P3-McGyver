@@ -56,12 +56,6 @@ class Maze:
             # return(empty_tiles)
             # breakpoint()
 
-    """
-    @classmethod
-    def rand(empty_tiles):
-        value = random.choice(tuple(cls.empty_tiles)).split(",")
-        print(value)
-    """
     @classmethod
     def remove_empty_tiles_around(cls, row, colunm):
         for r in range(row - 1, row + 2):
