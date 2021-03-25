@@ -24,9 +24,7 @@ class Maze:
     def read_maze(cls, file):
         row = 0
         column = 0
-        # print(f"Opening file : {file}")
         with open(file) as reader:
-            # print(reader.readlines())
             for line in reader.readlines():
                 line_maze = []
                 for char in line.strip():
@@ -53,8 +51,6 @@ class Maze:
             cls.remove_empty_tiles_around(
                 cls.guardian_position[0], cls.guardian_position[1])
             print(len(cls.empty_tiles))
-            # return(empty_tiles)
-            # breakpoint()
 
     @classmethod
     def remove_empty_tiles_around(cls, row, colunm):
@@ -71,6 +67,3 @@ class Maze:
     def random_empty_tile(cls):
         return random.choice(tuple(cls.empty_tiles)).split(",")
 
-    # @classmethod
-    # def random_items(cls):
-    #     # Place 3 items in random_empty_tile
