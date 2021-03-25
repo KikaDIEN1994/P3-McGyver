@@ -51,6 +51,7 @@ class Maze:
             cls.remove_empty_tiles_around(
                 cls.guardian_position[0], cls.guardian_position[1])
             print(len(cls.empty_tiles))
+            cls.put_items()
 
     @classmethod
     def remove_empty_tiles_around(cls, row, colunm):
@@ -67,3 +68,12 @@ class Maze:
     def random_empty_tile(cls):
         return random.choice(tuple(cls.empty_tiles)).split(",")
 
+    @classmethod
+    def put_items(cls):
+        print(f"put {cls.NUMBER_OF_ITEMS} items")
+        for item in Tile.ITEMS:
+            print("item : ", item)
+            row, column = [int(coord) for coord in cls.random_empty_tile()]
+            print(f"row : {row} , column: {column}")
+            cls.maze[row][column] = item
+            cls.remove_empty_tiles_around(row, column)
