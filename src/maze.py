@@ -1,6 +1,6 @@
 import random
 
-from tile import Tile
+from .tile import Tile
 
 
 class InvalidMazeChar(Exception):
