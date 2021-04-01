@@ -12,8 +12,6 @@ class Tile:
 
     VALID_TILES_CHARS = [FLOOR, WALL, PLAYER, GUADIAN] + ITEMS
 
-    print(VALID_TILES_CHARS)
-
     @classmethod
     def is_valid(cls, char):
         return char in cls.VALID_TILES_CHARS
@@ -21,6 +19,10 @@ class Tile:
     @classmethod
     def is_floor(cls, char):
         return char == cls.FLOOR
+
+    @classmethod
+    def is_wall(cls, char):
+        return char == cls.WALL
 
     @classmethod
     def is_player(cls, char):
