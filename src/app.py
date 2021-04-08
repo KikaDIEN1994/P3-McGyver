@@ -4,10 +4,15 @@ import pygame
 
 from .maze import Maze
 class Game:
+    SPRITE_SIZE = 64
+    NB_SPRITE = 15
+
     def __init__(self):
         self._running = True
         self._screen = None
-        self.size = self.width, self.height = 640, 400
+        self.width = self.SPRITE_SIZE * self.NB_SPRITE
+        self.height = self.SPRITE_SIZE * self.NB_SPRITE
+        self.size = self.width, self.height
 
     def on_init(self):
         pygame.init()
