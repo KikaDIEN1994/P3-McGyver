@@ -14,43 +14,17 @@ class Tile:
     asset_of_tile = {
         FLOOR: "floor.png",
         WALL: "wall.png",
-        PLAYER: "player.jpg",
+        PLAYER: "player.png",
         GUARDIAN: "guardian.png",
 
         ITEM_0: "item_0.png",
-        ITEM_1: "item_1.jpg",
-        ITEM_2: "item_2.jpg",
+        ITEM_1: "item_1.png",
+        ITEM_2: "item_2.png",
     }
-
-    # walls = pygame.image.load("assets/img/wall.png")
-
-    # floors = pygame.image.load("assets/img/floor.png")
-
-    # players = pygame.image.load("assets/img/player.jpg")
-    # guardians = pygame.image.load(
-    #     "assets/img/guardian.png")
-    # syringe = pygame.image.load(
-    #     "assets/img/item_1.jpg")
-    # needle = pygame.image.load(
-    #     "assets/img/item_2.jpg")
-    # ether = pygame.image.load(
-    #     "assets/img/item_3.png")
-
-    # FILE = open("level.txt", "r")
-
-    # s = FILE.read()
-
-    # print(s)
-
-    # print(FILE)
 
     ITEMS = [ITEM_0, ITEM_1, ITEM_2]
 
     VALID_TILES_CHARS = [FLOOR, WALL, PLAYER, GUARDIAN] + ITEMS
-
-    # SPRITE_ITEMS = [syringe, needle, ether]
-
-    # SPRITE = [floors, walls, players, guardians] + SPRITE_ITEMS
 
     @classmethod
     def is_valid(cls, char):
@@ -70,7 +44,7 @@ class Tile:
 
     @classmethod
     def is_guardian(cls, char):
-        return char == cls.GUADIAN
+        return char == cls.GUARDIAN
 
     @classmethod
     def is_item(cls, char):
