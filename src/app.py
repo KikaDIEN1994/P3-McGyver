@@ -3,6 +3,13 @@ import os
 import pygame
 
 from .maze import Maze
+from .tile import Tile
+
+ASSETS_PATH = os.path.join(os.path.dirname(__file__), "assets")
+
+assets = {}
+
+
 class Game:
     SPRITE_SIZE = 64
     NB_SPRITE = 15
@@ -14,10 +21,18 @@ class Game:
         self.height = self.SPRITE_SIZE * self.NB_SPRITE
         self.size = self.width, self.height
 
+    def load_assets(self):
+        print("...loading assets")
+        for key, value in Tile.asset_of_tile.items():
+            assets[key] = pygame.image.load(
+                os.path.join(ASSETS_PATH, "img", value))
+        print(assets)
+
     def on_init(self):
         pygame.init()
         self._screen = pygame.display.set_mode(
             self.size, pygame.HWSURFACE | pygame.DOUBLEBUF)
+        self.load_assets()
         self._running = True
 
     def on_event(self, event):
