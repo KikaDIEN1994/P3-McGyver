@@ -36,9 +36,22 @@ class Game:
         self._running = True
 
     def on_event(self, event):
-        print("on event")
         if event.type == pygame.QUIT:
             self._running = False
+            print("close with cross")
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                self._running = False
+                print("close with escape")
+            elif event.key == pygame.K_DOWN:
+                print("down")
+            elif event.key == pygame.K_UP:
+                print("up")
+            elif event.key == pygame.K_LEFT:
+                print("left")
+            elif event.key == pygame.K_RIGHT:
+                print("right")
+        # TODO
 
     def on_loop(self):
         pass
